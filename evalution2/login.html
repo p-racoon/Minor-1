@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="icon" href="images/logo1.png" type="img/jpg/png" >
+	<title>HTML5 Login</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+	<section class="loginform cf">
+		<form name="login" action="validate.jsp" method="post" accept-charset="utf-8">
+			<div>
+			<label for="type" >Type:</label>
+			<select name="ty1" required >
+                               <option value="uclient">user
+                        </option>
+                 <option value="seller">seller
+                        </option>       
+	   </select>
+			</div>
+			<div>
+			
+			      <label for="name">Email:</label>
+			      <input type="email" name="usermail" placeholder="email_id " required>
+			</div>
+			<div>
+			      <label for="password">Password:</label>
+			      <input type="password" name="password" placeholder="password" required>
+			</div>
+			<div>
+					<input type="submit">
+			</div>
+		</form>
+	</section>
+</body>
+</html>

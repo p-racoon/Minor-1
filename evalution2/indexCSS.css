@@ -1,0 +1,246 @@
+.container {
+  max-width: 960px;
+  margin: 50 auto;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  //background-color: #c24343;
+  //background-color: #c24343;
+  background-color: #892B89;
+  //text-shadow: 2px 2px 4px purple;
+  //background-image: url("images/index/bkgrnd.jpg");
+}
+/*#menu
+{
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+ul,menu{
+  display:block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after:1em;
+  -webkit
+}*/
+#bar1
+{
+  z-index: 10;
+  float: top;
+  //display: inline-block;
+  overflow: hidden;
+  position: fixed;
+  height: 45px;
+  width: 100%;
+  //min-width: 1500px;
+  //background-color: #35373c;
+  background-color: #000;
+  margin-top: -80px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+#bar2 
+{
+  z-index: 8;
+  //overflow: auto;
+  overflow: hidden;
+  float: top;
+  //display: inline-block;
+  position: fixed;
+  height: 35px;
+  width: 100%;
+  //min-width: 1500px;
+  background-color: #35373c;
+  margin-top: -35px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+#searchBar
+{
+  margin: 10px 20px 5px 10px;
+  float: left;
+}
+#logo{
+  float: left;
+  margin-right: 20px;
+}
+#logoName
+{
+  float: left;
+  color: white;
+  font-size: 30px;
+  margin-right: 100px;
+  margin-top: 5px;
+}
+#LogButtons
+{//display: inline-block;
+  //position: fixed;
+  float: right;
+  margin: 10px 10px 10px 4px ;
+}
+#LogButtons a:hover{
+  color: #f3faef;
+}
+
+#LogButtons a{
+  font-family: "Segoe UI",Arial,sans-serif !important;
+  color: black;
+}
+.LogButtonClass
+{
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid ;
+  background-color: #6bb642;
+  padding: 5px 5px 5px 5px ;
+}
+#bar1 a{
+  //color: white;
+text-decoration: none;
+font-family: "Segoe UI",Arial,sans-serif !important;
+padding-left: 20px;
+padding-right: 20px;
+}
+#user
+{
+  float: right;
+  margin: 10px auto;
+  //color: white;
+}
+#viewProfile
+{
+  float: right;
+  margin: 10px auto;
+}
+
+a{
+color: white;
+text-decoration: none;
+padding-left: 20px;
+padding-right: 20px;
+//text-align: center;
+font-family: "Segoe UI",Arial,sans-serif !important;
+}
+#pageMenu
+{
+  float: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  //text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0px 00px 4px auto;
+  //word-spacing: 20px;
+}
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 10px 0;
+}
+section.module.parallax {
+  height: 700px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: white;
+  font-size: 20px;
+  line-height: 500px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  //text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 15px rgba(153, 51, 153,0.8);
+  //text-shadow: 0 0 10px purple;
+}
+section.module.parallax p {
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+  font-size: 30px;
+ // line-height: 0px;
+  font-weight: 400;
+  text-align: center;
+  //text-transform: uppercase;
+  //text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 12px rgba(153, 51, 153,0.5);
+  //text-shadow: 2px 2px 7px purple;
+}
+section.module.parallax-0 {
+  background-image: url("images/index/homeScreen.jpg");
+}
+section.module.parallax-1 {
+  background-image: url("images/index/hall.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("images/index/pandit.jpg");
+}
+section.module.parallax-3 {
+  background-image: url("images/index/bangle.jpg");
+}
+section.module.parallax-4 {
+  background-image: url("images/index/car.jpg");
+}
+section.module.parallax-5 {
+  background-image: url("images/index/camera.jpg");
+}
+section.module.parallax-6 {
+  background-image: url("images/index/food.jpg");
+  }
+  section.module.parallax-7 {
+  background-image: url("images/index/security1.jpg");
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 60px;
+  }
+}
+#footer
+{
+  z-index: 10;
+  float: bottom;
+  //display: inline-block;
+  overflow: hidden;
+  //position: fixed;
+  height: 45px;
+  width: 100%;
+  //min-width: 1500px;
+  //background-color: #35373c;
+  background-color: #000;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}

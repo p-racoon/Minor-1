@@ -1,0 +1,2 @@
+<!--out.println(rs.getString(2));-->
+<!--out.println("<p><a href=veiwdetail.jsp?l_id="+rs.getString(3)+">Location:</a></p>");-->

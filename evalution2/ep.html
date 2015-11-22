@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Profile</title>
+<link rel="stylesheet" href="editProfileCSS.css">
+</head>
+<body >
+
+<!--<header>
+<h1>SHADIWALA.com</h1>
+<button type = "button" onclick = alert('YOU REALLY WANT TO LOGOUT')>LOGOUT</BUTTON>
+</header>-->
+    <div id="bar1" >
+      <div id="leftSideBar1">
+        <div id="logo">
+          <img src="images/logo1.png" style="margin-left:20px;height:40px; width:40px;">
+        </div>
+        <h id="logoName">ShadiWadi.com </h>
+      </div>
+      <div id="rightSideBar1">
+
+        <div id="SearchBar">
+          <form action="./results.php" method="get">
+          <input type="text" name="Search" size="30" maxlength="255" placeholder="Search Here...">
+          <input type="submit" value="Search"/> 
+          </form>
+
+        </div>
+        <div id="LogButtons">
+          <!--<a href="#">test1</a>
+          <a href="#">test2</a>-->
+          <!--
+          <button>Log In</button>
+          <button>Sign Up</button>-->
+          <a href="" class="LogButtonClass">Log Out</a>
+          <!--<a href="" class="LogButtonClass">Sign Up</a>-->
+        </div>
+        <div id="profile">
+          <a href="" id="viewProfile">My Profile</a>
+          <a href="" id="user" >Username</a>
+        </div>
+      </div>
+    </div>
+<div>
+<span><div id="formLeft" style="width:20%;height=100%;"></div></span>
+<span><div id="formBua">
+<section>
+<form action="check.php" method="POST" accept-charset="utf-8" class="form" role="form">
+<table border="5" cellpadding="1" cellspacing="1" height="100" width="1100">
+<tbody>       
+<tr>
+<td style="width: 550px">INFORMATION(CURRENT)</td>
+
+<td style="width: 550px">INFORMATION(NEW)</td>
+
+</tr>
+</tbody>
+<br>
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">MOBILE</td>
+<td style="height: 10px"><input type = "number" name = "mobile1"></td>
+<td style="width: 275px">MOBILE</td>
+<td style="height: 10px"><input type = "number" name = "mobile2"></td>
+</tr>
+</tbody>
+<br>
+
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 60px">PHONE</td>
+<td style="width: 100px">STD</td>
+<td style="width: 100px"><input type = "text" name = "mobile3" size = "2"></td>
+<td style="height: 10px"><input type = "number" name = "std"></td>
+
+<td style="width: 60px">PHONE</td>
+<td style="width: 100px">STD</td>
+<td style="width: 100px"><input type = "text" name = "mobile4" size = "2"></td>
+<td style="height: 10px"><input type = "number" name = "std"></td>
+</tr>
+<br>
+</tbody>
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">EMAIL ID</td>
+<td style="height: 10px"><input type = "text" name = "email1"></td>
+<td style="width: 275px">EMAIL ID</td>
+<td style="height: 10px"><input type = "text" name = "email2"></td>
+</tr>
+</tbody><br>
+
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">ADDRESS1</td>
+<td style="height: 10px"><input type = "text" name = "add1a"></td>
+<td style="width: 275px">ADDRESS1</td>
+<td style="height: 10px"><input type = "text" name = "add1b"></td>
+</tr>
+</tbody><br>
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">ADDRESS2</td>
+<td style="height: 10px"><input type = "text" name = "add2a"></td>
+<td style="width: 275px">ADDRESS2</td>
+<td style="height: 10px"><input type = "text" name = "add2b"></td>
+</tr>
+</tbody><br>
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">ADDRESS3</td>
+<td style="height: 10px"><input type = "text" name = "add3a"></td>
+<td style="width: 275px">ADDRESS3</td>
+<td style="height: 10px"><input type = "text" name = "add3b"></td>
+</tr>
+</tbody><br>
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">PINCODE</td>
+<td style="height: 10px"><input type = "text" name = "pinc1"></td>
+<td style="width: 275px">PINCODE</td>
+<td style="height: 10px"><input type = "text" name = "pinc2"></td>
+</tr>
+</tbody><br>
+
+
+
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">INFO</td>
+<td style="height: 10px"><textarea = "message1" rows="10" cols="30"></textarea></td>
+<td style="width: 275px">INFO</td>
+<td style="height: 10px"><textarea = "message2" rows="10" cols="30"></textarea></td>
+</tr>
+</tbody><br>
+
+
+<table border="5" cellpadding="1" cellspacing="1" height="50" width="1100">
+<tbody>
+<tr>
+<td style="width: 275px">PROFILE PHOTO</td>
+<td><img src="my pic1" width="250" height="200"></td>
+<td style="width: 275px">PROFILE PHOTO</td>
+<td><img src="my pic2" width="250" height="200"><button type="button" class="btn btn-primary btn-lg">choose photo</button></td>
+</tbody><br>
+</table>
+</form>
+</section>
+</div></span>
+<span><div id="formLeft" style="width:20%;height=100%;"></div></span>
+</div>
+<footer>
+<button class="btn btn-lg" type="submit">submit</button>
+</footer>
+</form>
+</body>
+</html>

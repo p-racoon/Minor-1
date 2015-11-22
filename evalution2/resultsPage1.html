@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Results</title>
+	<link rel="stylesheet" href="resultsPageCSS.css">
+</head>
+<body>
+	<div id="bar1" >
+      <div id="leftSideBar1">
+        <div id="logo">
+          <img src="images/logo1.png" style="margin-left:20px;height:40px; width:40px;">
+        </div>
+        <h id="logoName">ShadiWadi.com </h>
+      </div>
+      <div id="rightSideBar1">
+
+        <div id="SearchBar">
+          <form action="./results.php" method="get">
+          <input type="text" name="Search" size="30" maxlength="255" placeholder="Search Here...">
+          <input type="submit" value="Search"/> 
+          </form>
+
+        </div>
+        <div id="LogButtons">
+          <!--<a href="#">test1</a>
+          <a href="#">test2</a>-->
+          <!--
+          <button>Log In</button>
+          <button>Sign Up</button>-->
+          <a href="" class="LogButtonClass">Log Out</a>
+          <!--<a href="" class="LogButtonClass">Sign Up</a>-->
+        </div>
+        <div id="profile">
+          <a href="" id="viewProfile">My Profile</a>
+          <a href="" id="user" >Username</a>
+        </div>
+      </div>
+    </div>
+<!--
+    <div id="bar2">
+      <div id="leftSideBar2"></div>
+      <div id="rightSideBar2">
+
+        <div id="pageMenu">
+          <a href="">Home</a>
+          <a href="">Halls</a>
+          <a href="">Pandit</a>
+          <a href="">Jewellery</a>
+          <a href="">Travel</a>
+          <a href="">Photography</a>
+          <a href="">Food</a>
+          <a href="">Security</a>
+        </div>
+        </div>
+      </div>
+    </div>-->
+    <div id="container">
+    	<span>
+        <div id="refinePanel">
+          <div id="refineByCategory">
+            <h1 style="padding-top:10px;padding-left:10px;"> Categories</h1>
+            <a href="">Halls</a><br>
+            <a href="">Pandit</a><br>
+            <a href="">Jewellery</a><br>
+            <a href="">Travel</a><br>
+            <a href="">Photography</a><br>
+            <a href="">Food</a><br>
+            <a href="">Security</a>
+            <hr>
+          </div>
+          <div id="refineByPrice">
+            <h1 style="padding-top:0px; padding-left:10px ">Price(Rs.)</h1>
+            <a href="">0-1000</a><br>
+            <a href="">1000-5000</a><br>
+            <a href="">5000-10000</a><br>
+            <a href="">5000-10000</a>
+          </div>
+          <hr>
+          <div id="refineByLocation">
+            <h1 style="padding-top:0px; padding-left:10px ">Location</h1>
+            <!-- location dropdown box <input  >-->
+          </div>
+        </div>
+      </span>
+
+    <span>
+    	<div id="dispResults">
+        <h2 id="currentCategory" style="font-family: Segoe UI,Arial,sans-serif ;">Category</h2>
+        <hr>
+        <div class="box">
+          <div class="pic"></div>
+          <p class="sellerName" style="text-weight:bold; font-size:25px;">Seller Name</p>
+          <hr style="margin: 0.1px;">
+          <p>Contact no.: </p>
+          <p>Address: </p>
+          <p> Location</p>
+          <p>Rating: 2/5</p>
+          <input type="button" value="Book Now">
+        </div>
+    	</div>
+    </div>
+    </span>
+    <div id="footer">
+      <a href="AboutUs1.html">About Us</a>
+      <a href="ContactUs1.html">Contact Us</a>
+    </div>
+</body>
+</html>

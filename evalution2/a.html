@@ -1,0 +1,168 @@
+
+<html xml:lang="en" lang="en">
+    <head>
+        <title>fill detail Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+        <script type="text/javascript" src="FormValidation.js"></script>
+        <script type="text/javascript">
+
+function validate(form){
+    var email = form.e1.value;
+    var password1 = form.p1.value;
+    var password2 = form.p2.value;
+    var errors = [];
+    
+    if (!checkEmail(email)) {
+        errors[errors.length] = "You must enter a valid email address.";
+    }
+
+    if (!checkLength(password1)) {
+        errors[errors.length] = "You must enter a password.";
+    }
+    else if (compareValues(password1, password2) !== 0) {
+        errors[errors.length] = "Passwords don't match.";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors);
+        return false;
+    }
+
+    return true;
+}
+
+function reportErrors(errors){
+    var msg = "There were some problems...\n";
+    var numError;
+    for (var i = 0; i<errors.length; i++) {
+        numError = i + 1;
+        msg += "\n" + numError + ". " + errors[i];
+    }
+    alert(msg);
+}
+</script>
+    </head>
+    <body>    
+        <form action="1.html" class="register" method="get" 
+            >
+            <h1>fill required data</h1>
+            <fieldset class="row1">
+                <legend>Account Details
+                </legend>
+                <p>
+                    <label>Email *
+                    </label>
+                    <input type="email"/ name="e1" required>
+                   
+                </p>
+                <p>
+                    <label>Password*
+                    </label>
+                    <input type="password"/ name="p1" required>
+                    <label class="obinfo">* obligatory fields
+                    </label>
+                </p>
+                 <p>
+                    <label>Password*
+                    </label>
+                    <input type="password"/ name="p2" required>
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="row2">
+                <legend>Personal Details
+                </legend>
+                <p>
+                    <label>Name *
+                    </label>
+                    <input type="text" class="long"/ name="n1" required>
+                </p>
+                <p>
+                    <label>Phone *
+                    </label>
+                    <input type="number" min="1111111111" max="9999999999"/ name="ph1" required>
+                </p>
+                <p>
+                    <label>Type *
+                    </label>
+                    <select name="ty1" required >
+                        <option value="halls">halls
+                        </option>
+                        <option value="Clothing">Clothing
+                        </option>
+                        <option value="caterers">caterers
+                        </option>
+                        <option value="Entertainment">Entertainment
+                        </option>
+                        <option value="Decorators">Decorators
+                        </option>
+                        <option value="Photographer">Photographer
+                        </option>
+                        <option value="WeddingPlanner">WeddingPlanner
+                        </option>
+                        <option value="Pandit">Pandit
+                        </option>
+                        <option value="WeddingCard">WeddingCard
+                        </option>
+                        <option value="Jewellary">Jewellary
+                        </option>
+                        <option value="Parlour">Parlour
+                        </option>
+                        <option value="Travel">Travel
+                        </option>
+                        <option value="Hotels">Hotels
+                        </option>
+                        <option value="WeddingSupply">WeddingSupply
+                        </option>
+                        <option value="Security">Security
+                        </option>
+
+                    </select></p>
+                <p>
+                    <label>location *
+                    </label>
+
+                    <select name="lo1" required>
+                        <option value="1">Delhi
+                        </option>
+                        <option value="2">Mumbai
+                        </option>
+                        <option value="3">Lucknow
+                        </option>
+                        <option value="4">Kanpur
+                        </option>
+                        
+                    </select></p>
+
+                </p>
+                           </fieldset>
+            <fieldset class="row3">
+                :) :)
+            </fieldset>
+            <fieldset class="row4">
+                <legend>Terms and Mailing
+                </legend>
+                <p class="agreement">
+                    <input type="checkbox" name="term" value="true"/ required>
+                    <label>*  I accept the <a href="termandcondition.html">Terms and Conditions</a></label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" name="agre" value="true"/ required>
+                    <label>I want to receive personalized offers by your site</label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" name="allow" value="true"/ required>
+                    <label>Allow partners to send me personalized offers and related services</label>
+                </p>
+            </fieldset>
+            <div><button class="button">Register &raquo;</button>
+
+        </form>
+    </body>
+</html>
+
+
+
+
+

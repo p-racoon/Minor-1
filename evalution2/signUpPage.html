@@ -1,0 +1,390 @@
+<html>
+<head>
+<link rel="icon" href="images/logo1.png" type="img/jpg/png" >
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="signUpPageCSS.css">
+ <script type="text/javascript" src="FormValidation.js"></script>
+        <script type="text/javascript">
+
+function validate(form){
+    var email = form.e1.value;
+    var password1 = form.p1.value;
+    var password2 = form.p2.value;
+    var errors = [];
+    
+    if (!checkEmail(email)) {
+        errors[errors.length] = "You must enter a valid email address.";
+    }
+
+    if (!checkLength(password1)) {
+        errors[errors.length] = "You must enter a password.";
+    }
+    else if (compareValues(password1, password2) !== 0) {
+        errors[errors.length] = "Passwords don't match.";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors);
+        return false;
+    }
+
+    return true;
+}
+function userValidate(form){
+    var email = form.ue1.value;
+    var password1 = form.up1.value;
+    var password2 = form.up2.value;
+    var errors = [];
+    
+    if (!checkEmail(email)) {
+        errors[errors.length] = "You must enter a valid email address.";
+    }
+
+    if (!checkLength(password1)) {
+        errors[errors.length] = "You must enter a password.";
+    }
+    else if (compareValues(password1, password2) !== 0) {
+        errors[errors.length] = "Passwords don't match.";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors);
+        return false;
+    }
+
+    return true;
+}
+
+function reportErrors(errors){
+    var msg = "There were some problems...\n";
+    var numError;
+    for (var i = 0; i<errors.length; i++) {
+        numError = i + 1;
+        msg += "\n" + numError + ". " + errors[i];
+    }
+    alert(msg);
+}
+</script>
+</head>
+<body>
+	<div id="bar1" >
+      <div id="leftSideBar1">
+        <div id="logo">
+          <img src="images/logo1.png" style="margin-left:20px;height:40px; width:40px;">
+        </div>
+        <a id="logoName" href="index.html">ShadiWadi.com </a>
+      </div>
+      <!--<div id="rightSideBar1">
+
+        <div id="SearchBar">
+          <form action="./results.php" method="get">
+          <input type="text" name="Search" size="30" maxlength="255" placeholder="Search Here...">
+          <input type="submit" value="Search"/> 
+          </form>
+
+        </div>
+        <div id="LogButtons">
+          <a href="" class="LogButtonClass">Log Out</a>
+        </div>
+        <div id="profile">
+          <a href="" id="viewProfile">My Profile</a>
+          <a href="" id="user" >Username</a>
+        </div>
+      </div>-->
+    </div>
+<!--
+    <div id="bar2">
+      <div id="leftSideBar2"></div>
+      <div id="rightSideBar2">
+
+        <div id="pageMenu">
+          <a href="">Home</a>
+          <a href="">Halls</a>
+          <a href="">Pandit</a>
+          <a href="">Jewellery</a>
+          <a href="">Travel</a>
+          <a href="">Photography</a>
+          <a href="">Food</a>
+          <a href="">Security</a>
+        </div>
+        </div>
+      </div>
+    </div>-->
+    <script type="text/javascript">
+    function showhideFormChoice(showform1) {
+      if(showform1=="User")
+        {
+         document.getElementById("formBoxSeller").style.display = 'none';
+         document.getElementById("formBoxUser").style.display = 'block';
+       }
+
+      if(showform1=="Seller"){
+         document.getElementById("formBoxUser").style.display = 'none';
+         document.getElementById("formBoxSeller").style.display = 'block';
+      }
+
+    }
+</script>
+    <div id="container">
+    	<span>
+        <div id="refinePanel">
+          <div id="refineByCategory">
+            <h1 style="padding-top:10px;padding-left:10px;color:white;"> Sign Up Now >></h1>
+            <!--<form>
+              <h3><input type="radio" id="showform" value="Halls" name="showform" onchange="showhideForm(this.value);"/>Halls</h3><br>
+              <h3><input type="radio" id="showform" value="Pandit" name="showform" onchange="showhideForm(this.value);"/>Pandit</h3><br>
+              <h3><input type="radio" id="showform" value="Jewellery" name="showform" onchange="showhideForm(this.value);"/>Jewellery</h3><br>
+              <h3><input type="radio" id="showform" value="Travel" name="showform" onchange="showhideForm(this.value);"/>Travel</h3><br>
+              <h3><input type="radio" id="showform" value="Photography" name="showform" onchange="showhideForm(this.value);"/>Photography</h3><br>
+              <h3><input type="radio" id="showform" value="Food" name="showform" onchange="showhideForm(this.value);"/>Food</h3><br>
+              <h3><input type="radio" id="showform" value="Security" name="showform" onchange="showhideForm(this.value);"/>Security</h3><br>
+
+            </form>-->
+            <!--
+            <a href="formHalls.html">Halls</a><br>
+            <a href="formPandit.html">Pandit</a><br>
+            <a href="formJewellery.html">Jewellery</a><br>
+            <a href="formTravel.html">Travel</a><br>
+            <a href="formPhotography.html">Photography</a><br>
+            <a href="formFood.html">Food</a><br>
+            <a href="formSecurity.html">Security</a>-->
+            <hr>
+          </div>
+        </div>
+      </span>
+
+    <span>
+    	<div id="dispResults">
+        <!--<h2 id="currentCategory" style="font-family: Segoe UI,Arial,sans-serif ;">Category</h2>-->
+        <h2 id="currentCategory" style="font-family: Segoe UI,Arial,sans-serif ;color:white;">Are You a seller or a User?</h2>
+        <form id="choiceBox">
+              <h3><input type="radio" id="showform1" value="User" name="showform1" onchange="showhideFormChoice(this.value);" style="margin-left:200px;" />User<input type="radio" id="showform1" value="Seller" name="showform1" onchange="showhideFormChoice(this.value);" style="margin-left:500px;"/>Seller</h3>
+              
+        </form>
+        <hr>
+        <div class="sellerForm">
+          <!--<div class="pic"></div>
+          <p class="sellerName" style="text-weight:bold; font-size:25px;">Seller Name</p>
+          <hr style="margin: 0.1px;">
+          <input type="button" value="Add Another Buissness">-->
+
+          <div class="box" id="formBoxSeller" style="display:none">
+            <h2>Seller Sign Up Form</h2>
+          <!--
+          <form id="mainForm" method="post" onsubmit="return validate(this);">
+            Company Name:
+            <input type="text" name="cName" required>
+            <br>
+            E-Mail id:*
+            <input type="email" name="e1" required><br>
+            Enter Password:*
+            <input type="password" name="p1" required><br>
+            Repeat Password:*
+            <input type="password" name="p2" required><br>
+
+            Enter Alternate Email-id:
+            <input type="email" name="emailSecondary">
+            <hr>
+            Enter Phone no.:*
+            <input type="number" name="phNumber1" maxlengtth="10"  required><br>
+            Enter Alternate Phone no.:
+            <input type="number" name="phNumber2" maxlengtth="10">
+            <hr>
+            Enter Location:*
+            <input type="text" placeholder="select city" required><br>
+            Enter your Address:*
+            <input type="text" name="Locality" placeholder="Locality"  required>
+            <input type="text"  name="Society" placeholder="Street/Society Name" required>
+            <input type="text"  name="Landmark" placeholder="Landmark" >
+            <input type="text"  name="officeNo" placeholder="Office no."  required>
+            <hr>
+            Choose the Best-fit Type you all in:*
+            <br><br><br><br><br><br>
+            <div id="type">
+            <div id="typeHalls" style="display:none">
+             <select name="rbHalls" required >
+              <option value="type1">large marriage hall</option>
+              <option value="type2">medium marriage hall</option>
+              <option value="type3">small marriage hall</option>
+              <option value="type4">for Staying purpose</option>
+              <option value="type5">other</option>
+            </select>
+            <div> Enter Capacity: <input type="number"  name="capacity" placeholder="Hall Capacity"  required></div>
+            </div>
+
+            <div id="typePandit" style="display:none">
+             <select name="rbPandit" required >
+              <option value="type1">Hindu</option>
+              <option value="type2">Muslim</option>
+              <option value="type3">Christian</option>
+              <option value="type4">Sikh</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            
+            <div id="typeJewellery" style="display:none">
+             <select name="rbJewellery" required >
+              <option value="type1">real</option>
+              <option value="type2">fake</option>
+              <option value="type3">rent</option>
+              <option value="type4">paltinum</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            
+            <div id="typeTravel" style="display:none">
+             <select name="rbTravel" required >
+              <option value="type1">Luxury Cars</option>
+              <option value="type2">ghodhi</option>
+              <option value="type3">Private Taxi</option>
+              <option value="type4">Bus</option>
+              <option value="type4">Loaders</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            
+             <div id="typePhotography" style="display:none">
+             <select name="rbPhotography" required >
+              <option value="type1">Photography</option>
+              <option value="type2">Videography</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            
+            <div id="typeFood" style="display:none">
+             <select name="rbFood" required >
+              <option value="type1">Veg</option>
+              <option value="type2">Veg+Non Veg</option>
+              <option value="type3">Fast Food</option>
+              <option value="type4">drinks</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            
+            <div id="typeSecurity" style="display:none">
+             <select name="rbSecurity" required >
+              <option value="type1">full time</option>
+              <option value="type2">armed</option>
+              <option value="type3">unarmed</option>
+              <option value="type4">on the Go</option>
+              <option value="type5">other</option>
+            </select>
+            </div>
+            </div>
+            <br><br><br><br><br><br>
+            
+            Give us some infomation about your Buisness(it will be displayed in your info):*<br>
+            <textarea ROWS="5" COLS="100" Placeholder="Enter your details here" style="margin-top:10px;"  required></textarea><br>
+            Enter your Price:*<input type="number" name="LowerPR" placeholder="Lower Price Range">   <input type="number" name="HigherPR" placeholder="Higher Price Range">
+            <hr>
+            Add some Pics: <input type="file" name="pic" accept="image/*">
+            <hr>
+            Click Here When Ready:
+            <input type="submit" value="Submit" required><br>
+            Click Here to Reset form:
+            <input type="button" value="Reset" onclick="document.getElementById('mainForm').reset();">
+            
+            
+          </form>-->
+            <form id="mainForm" action="update.jsp" method="post" onsubmit="return validate(this);">
+            User Name:*
+            <input type="text" name="Name" required>
+            <br>
+            E-Mail id:*
+            <input type="email" name="e1" required><br>
+            Enter Password:*
+            <input type="password" name="p1" required><br>
+            Repeat Password:*
+            <input type="password" name="p2" required><br>
+
+            Enter Alternate Email-id:
+            <input type="email" name="emailSecondary">
+            <hr>
+            Enter Phone no.:*
+            <input type="number" name="phNumber1" maxlength="10" min="1111111111" max="9999999999" required><br>
+            Enter Alternate Phone no.:
+            <input type="number" name="phNumber2" maxlength="10">
+            <hr>
+            Enter Location:*
+            <input type="text" placeholder="select city" name="location" required><br>
+            Enter your Address:*
+            <input type="text" name="Locality" placeholder="Locality"  required>
+            <input type="text"  name="Society" placeholder="Street/Society Name" required>
+            <input type="text"  name="Landmark" placeholder="Landmark" >
+            <input type="text"  name="officeNo" placeholder="Office no."  required>
+            <hr>
+            
+            Add Your Pic: <input type="file" name="pic" accept="image/*">
+			Type:*
+			<select name="ty1" required >
+                        <option value="halls">halls
+                        </option>
+                        <option value="Food">food
+                        </option>
+                       
+                        <option value="Photography">Photography
+                        </option>
+                        
+                        <option value="Pandit">Pandit
+                        
+                        <option value="Jewellery">Jewellery
+                        </option>
+                        
+                        <option value="Travel">Travel
+                        </option>
+                        
+                        <option value="Security">Security
+                        </option>
+
+                    </select>
+            <hr>
+            Click Here When Ready:
+            <input type="submit" value="Submit" required><br>
+            Click Here to Reset form:
+            <input type="button" value="Reset" onclick="document.getElementById('mainFormUser').reset();">
+          </form>
+          </div>
+
+          <div class="box" id="formBoxUser" style="display:none">
+            <h2>User Sign Up Form</h2>
+          <form id="mainFormUser" method="post" action="update_user.jsp" onsubmit="return userValidate(this);">
+            User Name:
+            <input type="text" name="uName" required>
+            <br>
+            E-Mail id:*
+            <input type="email" name="ue1" required><br>
+            Enter Password:*
+            <input type="password" name="up1" required><br>
+            Repeat Password:*
+            <input type="password" name="up2" required><br>
+            <hr>
+            Enter Phone no.:
+            <input type="number" name="phNumberUser" maxlengtth="10" min="1111111111" max="9999999999"required><br>
+            <hr>
+            Enter Location:*
+            <input type="text" placeholder="select city" name="location" required><br>
+            Enter your Address:*
+            <input type="text" name="UserLocality" placeholder="Locality"  required>
+            <input type="text"  name="UserSociety" placeholder="Street/Society Name" required>
+            <input type="text"  name="UserLandmark" placeholder="Landmark" >
+            <input type="text"  name="UserHouseNo" placeholder="House no."  required>
+            <hr>
+            
+            Add Your Pic: <input type="file" name="pic" accept="image/*">
+            <hr>
+            Click Here When Ready:
+            <input type="submit" value="Submit" required><br>
+            Click Here to Reset form:
+            <input type="button" value="Reset" onclick="document.getElementById('mainFormUser').reset();">
+          </form>
+          </div>
+        </div>
+    	</div>
+    </div>
+    </span>
+    <div id="footer">
+      <a href="AboutUs1.html">About Us</a>
+      <a href="ContactUs1.html">Contact Us</a>
+    </div>
+</body>
+</html>
